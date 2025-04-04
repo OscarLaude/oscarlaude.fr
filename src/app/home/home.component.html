@@ -7,13 +7,32 @@
       <div class="about-actions">
         <button class="btn-contact">Contact</button>
         <button class="btn-cv">
-          <tui-icon class="cv-icon" icon="@tui.file-user" />
+          <tui-icon icon="@tui.file-user" [style.font-size]="'20px'" />
           <span>CV</span>
         </button>
       </div>
     </article>
     <article class="certifications card">
-      <h2>certifications</h2>
+      <div class="certifications-title">
+        <tui-icon icon="@tui.award" [style.font-size]="'20px'" />
+        <h2>Certifications</h2>
+      </div>
+      <div class="certifications-list">
+        <div class="certification-item">
+          <div class="certification-content">
+            <h3>Titre de la Certification</h3>
+            <span class="badge-certificate full">Terminée le 04/04/2025</span>
+          </div>
+          <p>Intitulé de la certification</p>
+        </div>
+        <div class="certification-item">
+          <div class="certification-content">
+            <h3>Titre de la Certification</h3>
+            <span class="badge-certificate progress">En cours</span>
+          </div>
+          <p>Intitulé de la certification</p>
+        </div>
+      </div>
     </article>
     <article class="contact card">
       <h2>contact</h2>
