@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
+import { TuiIcon } from '@taiga-ui/core';
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [TuiIcon],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

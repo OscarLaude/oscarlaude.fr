@@ -1,26 +1,98 @@
+$spacing-base: 1.5rem;
+$spacing-sm: 0.75rem;
+$spacing-xs: 0.25rem;
+$spacing-md: 1rem;
+
+$border-color: #e5e7eb;
+$text-gray: #71717a;
+$bg-dark: #18181b;
+$text-light: #fafafa;
+
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 1.5rem;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+@mixin button-base {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: none;
+  font-size: $font-size-sm;
+  font-weight: 600;
+}
+
 main {
     width: 100%;
     height: 100dvh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-base;
 
     section {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1.5rem;
+        @include flex-column;
+        gap: $spacing-base;
+        padding: $spacing-base;
 
-        article.card {
-            padding: 1.5rem;
-            border-color: #e5e7eb;
-            border-style: solid;
-            border-width: 1px;
-            border-radius: .5rem;
-            --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        .card {
+            padding: $spacing-base;
+            border: 1px solid $border-color;
+            border-radius: 0.5rem;
+            @include card-shadow;
+
+            .hidden {
+                display: none;
+            }
+
+            .text-lg {
+                margin-bottom: $spacing-xs;
+                font-size: $font-size-lg;
+                font-weight: 700;
+                letter-spacing: -0.025em;
+                line-height: 2rem;
+            }
+
+            .text-shadow {
+                margin-bottom: $spacing-md;
+                color: $text-gray;
+                font-size: $font-size-base;
+            }
+
+            .about-actions {
+                display: flex;
+                gap: $spacing-sm;
+
+                button {
+                    @include button-base;
+
+                    &.btn-contact {
+                        background-color: $bg-dark;
+                        color: $text-light;
+                    }
+
+                    &.btn-cv {
+                        display: flex;
+                        align-items: center;
+                        gap: $spacing-sm;
+                        background-color: transparent;
+                        cursor: pointer;
+                        border: 1px solid $border-color;
+
+                        .cv-icon {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
         }
-
     }
 
 }

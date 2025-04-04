@@ -6,4 +6,10 @@ figure {
   margin-block-start: 0;
   margin-block-end: 0;
 }
-/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
