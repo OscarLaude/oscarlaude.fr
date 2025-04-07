@@ -187,6 +187,67 @@ main {
             }
         }
 
+        .projects-title {
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-md;
+            h2 {
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 1.75rem;
+            }
+        }
+
+        .projects-list {
+            .project-item {
+                display: flex;
+                align-items: center;
+                padding: .5rem;
+                gap: $spacing-md;
+
+                &.mt-1 {
+                    margin-top: $spacing-md;
+                }
+
+                .project-content {
+                    width: 64px;
+                    height: 64px;
+                    background-color: #e5e7eb;
+                    border-radius: .5rem;
+                }
+                .project-informations {
+                    h3 {
+                        font-size: $font-size-base;
+                    }
+                    p {
+                        font-size: $font-size-xsm;
+                        color: $text-gray;
+                        line-height: 1rem;
+                    }
+                }
+                .project-actions {
+                    display: flex;
+                    opacity: 0;
+                    margin-left: auto;
+                    transition: opacity .3s ease-in-out;
+                    gap: 1rem;
+                    a {
+                        display: flex;
+                        color: $bg-dark;
+                        text-decoration: none !important;
+                    }
+                }
+                &:hover {
+                    background-color: $bg-light;
+                    border-radius: .5rem;
+                    .project-actions {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
     }
 
 }
