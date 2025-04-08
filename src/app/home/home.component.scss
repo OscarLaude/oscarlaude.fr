@@ -282,6 +282,29 @@ main {
             }
         }
 
+        .career-title {
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-md;
+            h2 {
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 1.75rem;
+            }
+        }
+
+        .career-content {
+            font-weight: 500;
+            .career-head {
+                font-size: $font-size-base;
+            }
+            .career-company {
+                font-size: $font-size-xsm;
+                color: $text-gray;
+            }
+        }
+
     }
 
 }
