@@ -248,6 +248,40 @@ main {
             }
         }
 
+        .skills-title {
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-md;
+            h2 {
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 1.75rem;
+            }
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            .skill-item {
+                display: inline-flex;
+                color: $bg-dark;
+                font-weight: 600;
+                font-size: .75rem;
+                line-height: 1rem;
+                padding-top: 0.125rem;
+                padding-bottom: 0.125rem;
+                padding-left: 0.625rem;
+                padding-right: 0.625rem;
+                background-color: $bg-light;
+                border-radius: 9999px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: $bg-light;
+            }
+        }
+
     }
 
 }
