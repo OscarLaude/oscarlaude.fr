@@ -30,6 +30,13 @@ export class HomeComponent {
     },
   ];
 
+  protected readonly skills = [
+    "Angular", "RxJS", "Angular Material", "Typescript", "Javascript", "HTML5", "CSS3/SCSS/SASS",
+    "jQuery", "NgRx", "Webpack", "Jasmine", "Accessibilité Web (WCAG)", "React", "NextJS", "Node.js",
+    "Express", "PHP", "C#", "Slim Framework", "Symfony", "Twig", "SQL (MySQL, PostgreSQL, MariaDB)",
+    "NoSQL (Firebase, MongoDB)", "Git", "Jira", "CI/CD", "Docker"
+  ];
+
   /**
    * @description:
    * Embedded PDFs in mobile doesn't work,
