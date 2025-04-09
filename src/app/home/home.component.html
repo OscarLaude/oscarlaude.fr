@@ -18,19 +18,12 @@
         <h2>Certifications</h2>
       </div>
       <div class="certifications-list">
-        <div class="certification-item">
+        <div *ngFor="let item of certifications" class="certification-item">
           <div class="certification-content">
-            <h3>Titre de la Certification</h3>
-            <span class="badge-certificate full">Terminée le 04/04/2025</span>
+            <h3>{{ item.title }}</h3>
+            <span class="badge-certificate {{ item.status == 0 ? 'progress' : 'full' }}">{{ item.status == 0 ? "En cours" : "Terminée le " + item.date }}</span>
           </div>
-          <p>Intitulé de la certification</p>
-        </div>
-        <div class="certification-item">
-          <div class="certification-content">
-            <h3>Titre de la Certification</h3>
-            <span class="badge-certificate progress">En cours</span>
-          </div>
-          <p>Intitulé de la certification</p>
+          <p>{{ item.subtitle }}</p>
         </div>
       </div>
     </article>
@@ -50,7 +43,9 @@
           </a>
         </div>
         <div class="network-item">
-          <tui-icon icon="@tui.linkedin" [style.font-size]="'16px'" />
+          <a href="https://linkedin.com/in/OscarLaude" target="_blank">
+            <tui-icon icon="@tui.linkedin" [style.font-size]="'16px'" />
+          </a>
         </div>
       </div>
     </article>
@@ -61,37 +56,20 @@
         <tui-icon icon="@tui.code" [style.font-size]="'20px'" />
         <h2>Projets</h2>
       </div>
-      <div class="projects-list">
+      <div *ngFor="let project of projects" class="projects-list">
         <div class="project-item">
           <div class="project-content">
             <span class="tmp-fake-img"></span>
           </div>
           <div class="project-informations">
-            <h3>Titre du Projet</h3>
-            <p>Description du projet</p>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.subtitle }}</p>
           </div>
           <div class="project-actions">
-            <a href="#">
+            <a href="{{ project.github }}" target="_blank">
               <tui-icon icon="@tui.github" [style.font-size]="'16px'" />
             </a>
-            <a href="#">
-              <tui-icon icon="@tui.external-link" [style.font-size]="'16px'" />
-            </a>
-          </div>
-        </div>
-        <div class="project-item mt-1">
-          <div class="project-content">
-            <span class="tmp-fake-img"></span>
-          </div>
-          <div class="project-informations">
-            <h3>Titre du Projet</h3>
-            <p>Description du projet</p>
-          </div>
-          <div class="project-actions">
-            <a href="#">
-              <tui-icon icon="@tui.github" [style.font-size]="'16px'" />
-            </a>
-            <a href="#">
+            <a href="{{ project.link }}" target="_blank">
               <tui-icon icon="@tui.external-link" [style.font-size]="'16px'" />
             </a>
           </div>

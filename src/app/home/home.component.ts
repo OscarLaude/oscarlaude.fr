@@ -19,6 +19,30 @@ export class HomeComponent {
 
   protected open = false;
 
+  protected readonly certifications = [
+    {
+      title: 'Programmation C# Microsoft',
+      subtitle: 'Cours udemy Jonathan Roux',
+      date: '01/04/2025',
+      status: 0
+    },
+    {
+      title: 'Google Analytics',
+      subtitle: 'Google Analytics Individual',
+      date: '10/11/2019',
+      status: 1
+    }
+  ];
+
+  protected readonly projects = [
+    {
+      title: 'Portfolio',
+      subtitle: 'Site web personnel oscarlaude.fr',
+      github: 'https://github.com/OscarLaude/oscarlaude.fr',
+      link: 'https://oscarlaude.fr'
+    }
+  ];
+
   protected readonly experiences = [
     {
       role: 'Développeur Web Fullstack',

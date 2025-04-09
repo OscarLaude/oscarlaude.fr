@@ -21,8 +21,11 @@ figure {
 button._vertical.ng-star-inserted {
   font-family: "Geist", sans-serif !important;
   font-size: 14px !important;
-  color: #18181b !important;
   font-weight: 600 !important;
+}
+
+button._vertical.ng-star-inserted:not(._active) {
+  color: #71717a !important;
 }
 
 .t-marker {
