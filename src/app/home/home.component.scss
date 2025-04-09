@@ -31,9 +31,23 @@ $font-size-lg: 1.5rem;
   font-weight: 600;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 6dvh;
+    border-bottom: 1px solid $border-color;
+    .header-content {
+        h1 {
+            font-size: $font-size-base;
+            padding-left: $spacing-base;
+        }
+    }
+}
+
 main {
     width: 100%;
-    height: 100dvh;
+    height: 88dvh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -41,6 +55,11 @@ main {
         @include flex-column;
         gap: $spacing-base;
         padding: $spacing-base;
+
+        &.middle-informations {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
 
         .card {
             padding: $spacing-base;
@@ -310,6 +329,22 @@ main {
     }
 
 }
+
+footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5.8dvh;
+    border-top: 1px solid $border-color;
+    .footer-content {
+        h3 {
+            font-size: $font-size-sm;
+            padding-left: $spacing-base;
+            color: $text-gray;
+        }
+    }
+}
+
 
 .iframe {
     inline-size: 100%;
