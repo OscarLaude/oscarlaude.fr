@@ -81,10 +81,12 @@ main {
                     &.btn-cv {
                         display: flex;
                         align-items: center;
+                        height: 2.5rem;
                         gap: $spacing-sm;
                         background-color: transparent;
                         cursor: pointer;
                         border: 1px solid $border-color;
+                        color: #18181b !important;
                         &:hover {
                             background-color: $bg-light;
                         }
@@ -309,3 +311,7 @@ main {
 
 }
 
+.iframe {
+    inline-size: 100%;
+    block-size: 100%;
+}

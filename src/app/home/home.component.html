@@ -6,7 +6,7 @@
       <p class="text-shadow">Passionné par le développement web et les nouvelles technologies.</p>
       <div class="about-actions">
         <button class="btn-contact">Contact</button>
-        <button class="btn-cv">
+        <button class="btn-cv" tuiButton type="button" (click)="open = true">
           <tui-icon icon="@tui.file-user" [style.font-size]="'20px'" />
           <span>CV</span>
         </button>
@@ -142,5 +142,12 @@
         </tui-stepper>
       </div>
     </article>
+    <ng-template [(tuiPdfViewer)]="open">
+        <iframe
+          title="pdf"
+          class="iframe"
+          [src]="src"
+        ></iframe>
+    </ng-template>
   </section>
 </main>
