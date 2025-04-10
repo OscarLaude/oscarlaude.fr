@@ -13,23 +13,25 @@ jobs:
       # Étape 1 : Checkout du code source
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          submodules: false  # Désactive l'initialisation des sous-modules Git si tu n'en utilises pas
 
       # Étape 2 : Configuration de Node.js 22.14.0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.14.0'  # Utilisation de Node.js version 22.14.0
+          node-version: '22.14.0'
 
       # Étape 3 : Installation des dépendances
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # Utilise 'npm ci' au lieu de 'npm install' pour une installation plus rapide et fiable
 
       # Étape 4 : Build de l'application Angular
       - name: Build Angular app
         run: npm run build -- --configuration production
 
-      # Étape 5 : Upload via SFTP
-      - name: Upload via SFTP
+      # Étape 5 : Upload via SFTP (optimisé pour ne transférer que les fichiers modifiés et exclure node_modules)
+      - name: Upload only modified files via SFTP
         uses: pressidium/lftp-mirror-action@v1
         with:
           host: ${{ secrets.SFTP_HOST }}
@@ -37,4 +39,9 @@ jobs:
           pass: ${{ secrets.SFTP_PASSWORD }}
           localDir: dist/oscarlaude.fr
           remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
-          options: --reverse --delete --verbose
+          options: --reverse --delete --verbose --only-newer
+          
+      # Étape 6 : Post-deployment cleanup
+      - name: Post-deployment cleanup
+        run: |
+          echo "No further cleanup needed"  # Si tu rencontres des problèmes liés à git config, tu peux éviter cette étape ou la personnaliser selon tes besoins
