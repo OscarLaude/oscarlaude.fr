@@ -3,11 +3,11 @@ name: Deploy Angular to IONOS via SFTP
 on:
   push:
     branches:
-      - main
+      - main  # Déclenchement à chaque push sur la branche 'main'
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Utilisation d'une machine virtuelle Ubuntu
 
     steps:
       # Étape 1 : Checkout du code source
@@ -34,7 +34,7 @@ jobs:
         with:
           host: ${{ secrets.SFTP_HOST }}
           user: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          pass: ${{ secrets.SFTP_PASSWORD }}
           localDir: dist/oscarlaude.fr
           remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
           options: --reverse --delete --verbose
