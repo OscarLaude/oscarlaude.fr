@@ -1,59 +1,101 @@
-# OscarlaudeFr
+# Oscar Laude - Fullstack Software Engineer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+[![Built with Angular](https://img.shields.io/badge/Built%20with-Angular-DD0031?logo=angular)](https://angular.io/)
+[![Backend in C#](https://img.shields.io/badge/Backend-C%23-512BD4?logo=csharp)](https://dotnet.microsoft.com/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-2ea44f)](https://oscarlaude.fr)
 
-## Development server
+Welcome to my professional portfolio repository! This project showcases my skills and experience as a Fullstack Software Engineer, specializing in Angular and C# development.
 
-To start a local development server, run:
+## 🛠️ Tech Stack & Skills
+
+### Frontend Development
+- **Core Technologies**: Angular, TypeScript, JavaScript, HTML5, CSS3/SCSS/SASS
+- **Frameworks & Libraries**:
+  - Angular Material, RxJS, NgRx
+  - React, NextJS
+  - jQuery
+- **Build Tools**: Webpack
+- **Testing**: Jasmine
+- **Web Standards**: WCAG Accessibility
+
+### Backend Development
+- **Languages & Frameworks**:
+  - C# / .NET
+  - Node.js with Express
+  - PHP (Symfony, Slim Framework)
+  - Template Engine: Twig
+
+### Database Management
+- **SQL**: MySQL, PostgreSQL, MariaDB
+- **NoSQL**: Firebase, MongoDB
+
+### API & Integration
+- RESTful API Development
+- External API Integration
+- API Documentation
+
+### DevOps & Tools
+- Version Control: Git
+- Project Management: Jira
+- Containerization: Docker
+- CI/CD Pipelines
+
+### Quality Assurance
+- Unit Testing
+- Functional Testing
+- Web Performance Optimization
+- Quality Assurance (QA) Practices
+
+## 🏃‍♂️ Running Locally
+
+1. **Prerequisites**
+   - Node.js (LTS version)
+   - Angular CLI
+   - .NET SDK
+
+2. **Installation**
+   ```bash
+   # Clone the repository
+   git clone https://github.com/yourusername/oscarlaude.fr.git
+   cd oscarlaude.fr
+
+   # Install dependencies
+   npm install
+   ```
+
+3. **Development Server**
+   ```bash
+   ng serve
+   ```
+   Navigate to `http://localhost:4200/`
+
+4. **Production Build**
+   ```bash
+   ng build --configuration production
+   ```
+
+## 🧪 Testing
 
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
+# Run unit tests
 ng test
-```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
+# Run end-to-end tests
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📝 License
 
-## Additional Resources
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📬 Contact
+
+Feel free to reach out if you have any questions or would like to connect!
+
+- Website: [oscarlaude.fr](https://oscarlaude.fr)
+- LinkedIn: [Oscar Laude](https://linkedin.com/in/oscarlaude)
+- Email: oscarlaudepro@gmail.com
+
+---
+
+© 2025 Oscar Laude. All rights reserved.
