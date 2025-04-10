@@ -26,6 +26,11 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --configuration production
 
+      - name: Create exclude file for LFTP
+        run: |
+          echo "assets/taiga-ui/" > exclude.txt
+          echo "assets/taiga-ui/**" >> exclude.txt
+
       - name: Upload only modified files via SFTP
         uses: pressidium/lftp-mirror-action@v1
         with:
@@ -34,7 +39,7 @@ jobs:
           pass: ${{ secrets.SFTP_PASSWORD }}
           localDir: dist/oscarlaude.fr
           remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
-          options: --reverse --verbose --only-newer --exclude-glob 'browser/assets/taiga-ui/**'
+          options: --reverse --verbose --only-newer --exclude-glob-from=exclude.txt
 
       - name: Post-deployment cleanup
         run: |
