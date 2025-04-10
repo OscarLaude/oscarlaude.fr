@@ -14,6 +14,10 @@ $font-size-sm: 14px;
 $font-size-xsm: 12px;
 $font-size-lg: 1.5rem;
 
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -93,6 +97,9 @@ main {
                     @include button-base;
 
                     &.btn-contact {
+                        display: flex;
+                        align-items: center;
+                        gap: $spacing-sm;
                         background-color: $bg-dark;
                         color: $text-light;
                     }
@@ -345,8 +352,25 @@ footer {
     }
 }
 
-
 .iframe {
     inline-size: 100%;
     block-size: 100%;
+}
+
+@media (max-width: $mobile) {
+    main {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        section.middle-informations {
+            padding-left: $spacing-base !important;
+            padding-right: $spacing-base !important;
+        }
+        section.middle-informations, section.right-informations {
+            padding-top: 0 !important;
+        }
+        article {
+            max-width: calc(100% - 4rem);
+        }
+    }
 }

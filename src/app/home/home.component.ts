@@ -1,13 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { TuiIcon } from '@taiga-ui/core';
-import { TuiConnected, TuiStepper, TuiPdfViewerDirective } from '@taiga-ui/kit';
+import { TuiConnected, TuiStepper, TuiPdfViewerDirective, TuiPulse } from '@taiga-ui/kit';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TUI_IS_MOBILE } from '@taiga-ui/cdk';
 import { TuiButton } from '@taiga-ui/core';
 @Component({
   selector: 'app-home',
-  imports: [TuiIcon, NgFor, TuiConnected, TuiStepper, TuiButton, TuiPdfViewerDirective],
+  imports: [TuiIcon, NgFor, TuiConnected, TuiStepper, TuiButton, TuiPdfViewerDirective, TuiPulse],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -18,6 +18,7 @@ export class HomeComponent {
   private readonly pdf = 'assets/fr_cv_oscarlaude.pdf';
 
   protected open = false;
+  protected playing = true;
 
   protected readonly certifications = [
     {

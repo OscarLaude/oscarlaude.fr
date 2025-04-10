@@ -8,9 +8,12 @@
     <article class="about card">
       <h1 class="hidden">Oscar Laude - Développeur Full Stack</h1>
       <h2 class="text-lg">Développeur Full Stack</h2>
-      <p class="text-shadow">Passionné par le développement web et les nouvelles technologies.</p>
+      <p class="text-shadow">Entre passion web et amour du code, je bricole des applis stylées en Angular et C#.</p>
       <div class="about-actions">
-        <button class="btn-contact">Contact</button>
+        <button class="btn-contact">
+          <tui-pulse [playing]="playing" />
+          <span>Disponible</span>
+        </button>
         <button class="btn-cv" tuiButton type="button" (click)="open = true">
           <tui-icon icon="@tui.file-user" [style.font-size]="'20px'" />
           <span>CV</span>
@@ -48,7 +51,7 @@
           </a>
         </div>
         <div class="network-item">
-          <a href="https://linkedin.com/in/OscarLaude" target="_blank">
+          <a href="https://linkedin.com/in/oscarlaude" target="_blank">
             <tui-icon icon="@tui.linkedin" [style.font-size]="'16px'" />
           </a>
         </div>
