@@ -34,7 +34,7 @@ jobs:
           pass: ${{ secrets.SFTP_PASSWORD }}
           localDir: dist/oscarlaude.fr
           remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
-          options: --reverse --verbose --only-newer --exclude-glob 'assets/taiga-ui/**'
+          options: --reverse --verbose --only-newer --exclude-glob 'browser/assets/taiga-ui/**'
 
       - name: Post-deployment cleanup
         run: |
