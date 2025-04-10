@@ -34,7 +34,7 @@ jobs:
           pass: ${{ secrets.SFTP_PASSWORD }}
           localDir: dist/oscarlaude.fr
           remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
-          options: --reverse --delete --verbose --only-newer
+          options: --reverse --verbose --only-newer
 
       - name: Post-deployment cleanup
         run: |
