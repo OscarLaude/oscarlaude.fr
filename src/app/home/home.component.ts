@@ -62,15 +62,9 @@ export class HomeComponent {
     "NoSQL (Firebase, MongoDB)", "Git", "Jira", "CI/CD", "Docker"
   ];
 
-  /**
-   * @description:
-   * Embedded PDFs in mobile doesn't work,
-   * so you can use third-party services
-   * or your own service to render PDF in mobile iframe
-   */
   protected readonly src = this.sanitizer.bypassSecurityTrustResourceUrl(
     this.isMobile
-      ? `https://drive.google.com/viewerng/viewer?embedded=true&url=https://taiga-ui.dev/${this.pdf}`
+      ? `https://docs.google.com/document/d/1TbLgN5QM0JzDuM-rt1IrRkcfa1-rbOKvG4Z4XMhLGrk/edit?usp=drive_link`
       : this.pdf,
   );
 
